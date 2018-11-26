@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<button>Play</button>
+	<br><br>
+	<button>Stop</button>
+<script src="https://www.html5rocks.com/en/tutorials/webaudio/intro/js/buffer-loader.js"></script>
+
+<script type="text/javascript">
+	audioCtx = new AudioContext();
+	source = null;
+
+	function playSound() {
+		bufferLoader = new BufferLoader(
+			audioCtx,
+			[''
+			],
+			finishedLoading
+			);
+		bufferLoader.load();
+	}
+
+	function stopSound() {
+		source.stop()
+	}
+</script>
+
+</body>
+</html>
